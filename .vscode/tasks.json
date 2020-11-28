@@ -1,0 +1,12 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "vscode:prepublish",
+			"problemMatcher": [],
+			"label": "build",
+			"detail": "npx js-yaml syntaxes/nestedtext.yaml > syntaxes/nestedtext.tmLanguage.json"
+		}
+	]
+}
