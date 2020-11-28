@@ -2,6 +2,15 @@
 $schema: https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json
 name: NestedText
 patterns:
-  - include: ""
+  - include: "#line-comment"
+repository:
+  line-comment:
+    patterns:
+      - match: (#)([^\n]*+) # possesive specific regex is better than .*
+        captures:
+          1:
+            name: keyword.other.nestedtext
+          2:
+            name: comment.line.number-sign.nestedtext
 scopeName: source.nestedtext
 ...
