@@ -1,7 +1,0 @@
-{
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "NestedText",
-	"patterns": [],
-	"repository": {},
-	"scopeName": "source.nestedtext"
-}
