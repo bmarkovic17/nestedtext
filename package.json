@@ -1,0 +1,26 @@
+{
+    "name": "nestedtext",
+    "displayName": "NestedText",
+    "description": "NestedText language support",
+    "publisher": "bmarkovic17",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.51.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "nestedtext",
+            "aliases": ["NestedText"],
+            "extensions": [".nt"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "nestedtext",
+            "scopeName": "source.nestedtext",
+            "path": "./syntaxes/nestedtext.tmLanguage.json"
+        }]
+    }
+}
