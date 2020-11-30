@@ -3,6 +3,7 @@ $schema: https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlangua
 name: NestedText
 patterns:
   - include: "#line-comment"
+  - include: "#string-item"
 repository:
   line-comment:
     patterns:
@@ -12,5 +13,13 @@ repository:
             name: keyword.other.nestedtext
           2:
             name: comment.line.number-sign.nestedtext
+  string-item:
+    patterns:
+      - match: "^ *+(>( |\n))([^\n]*+)"
+        captures:
+          1:
+            name: keyword.other.nestedtext
+          3:
+            name: string.unquoted.nestedtext
 scopeName: source.nestedtext
 ...
