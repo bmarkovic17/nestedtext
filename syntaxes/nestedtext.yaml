@@ -5,6 +5,7 @@ patterns:
   - include: "#line-comment"
   - include: "#string-item"
   - include: "#list-item"
+  - include: "#dictionary-item"
 repository:
   line-comment:
     patterns:
@@ -29,6 +30,16 @@ repository:
           1:
             name: keyword.other.nestedtext
           3:
+            name: string.unquoted.nestedtext
+  dictionary-item:
+    patterns:
+      - match: "^ *+(.+)(:( |\n))(.*+)"
+        captures:
+          1:
+            name: support.variable
+          2:
+            name: keyword.other.nestedtext
+          4:
             name: string.unquoted.nestedtext
 scopeName: source.nestedtext
 ...
