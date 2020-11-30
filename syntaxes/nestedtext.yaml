@@ -4,6 +4,7 @@ name: NestedText
 patterns:
   - include: "#line-comment"
   - include: "#string-item"
+  - include: "#list-item"
 repository:
   line-comment:
     patterns:
@@ -16,6 +17,14 @@ repository:
   string-item:
     patterns:
       - match: "^ *+(>( |\n))([^\n]*+)"
+        captures:
+          1:
+            name: keyword.other.nestedtext
+          3:
+            name: string.unquoted.nestedtext
+  list-item:
+    patterns:
+      - match: "^ *+(-( |\n))([^\n]*+)"
         captures:
           1:
             name: keyword.other.nestedtext
