@@ -6,6 +6,8 @@ patterns:
   - include: "#string-item"
   - include: "#list-item"
   - include: "#dictionary-item"
+  - include: "#double-quoted-dictionary-item"
+  - include: "#single-quoted-dictionary-item"
 repository:
   line-comment:
     patterns:
@@ -33,7 +35,27 @@ repository:
             name: string.unquoted.nestedtext
   dictionary-item:
     patterns:
-      - match: "^ *+(.+)(:( |\n))(.*+)"
+      - match: "^ *+([^\"|^']+)(:( |\n))(.*+)"
+        captures:
+          1:
+            name: support.variable
+          2:
+            name: keyword.other.nestedtext
+          4:
+            name: string.unquoted.nestedtext
+  double-quoted-dictionary-item:
+    patterns:
+      - match: "^ *+(\".+\")(:( |\n))(.*+)"
+        captures:
+          1:
+            name: support.variable
+          2:
+            name: keyword.other.nestedtext
+          4:
+            name: string.unquoted.nestedtext
+  single-quoted-dictionary-item:
+    patterns:
+      - match: "^ *+('.+')(:( |\n))(.*+)"
         captures:
           1:
             name: support.variable

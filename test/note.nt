@@ -2,7 +2,7 @@
 
 # Contact information for our officers
 
-president:
+"president":
     name: Katheryn McDaniel
     address:
         > 138 Almond Street
@@ -15,7 +15,7 @@ president:
     additional roles:
         - board member
 
-vice president:
+'vice president':
     name: Margaret Hodge
     address:
         > 2586 Marigold Lane
