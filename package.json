@@ -1,9 +1,14 @@
 {
     "name": "nestedtext",
     "displayName": "NestedText",
-    "description": "NestedText language support",
+    "description": "NestedText data format extension",
     "publisher": "bmarkovic17",
-    "version": "0.0.1",
+    "repository": {
+        "url": "https://github.com/bmarkovic17/nestedtext",
+        "type": "git"
+    },
+    "bugs": "https://github.com/bmarkovic17/nestedtext/issues",
+    "version": "1.0.0",
     "engines": {
         "vscode": "^1.51.0"
     },
