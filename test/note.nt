@@ -2,8 +2,8 @@
 
 # Contact information for our officers
 
-"president":
-    name: Katheryn McDaniel
+Katheryn McDaniel:
+    position: president
     address:
         > 138 Almond Street
         > Topeka, Kansas 20697
@@ -15,8 +15,8 @@
     additional roles:
         - board member
 
-'vice president':
-    name: Margaret Hodge
+: Margaret Hodge:
+    position: vice president
     address:
         > 2586 Marigold Lane
         > Topeka, Kansas 20682
@@ -25,20 +25,3 @@
     additional roles:
         - new membership task force
         - accounting task force
-
-treasurer:
-    -
-        name: Fumiko Purvis
-        address:
-            > 3636 Buffalo Ave
-            > Topeka, Kansas 20692
-        phone: 1-268-555-0280
-        email: fumiko.purvis@hotmail.com
-        additional roles:
-            - accounting task force
-    -
-        name: Merrill Eldridge
-            # Fumiko's term is ending at the end of the year.
-            # She will be replaced by Merrill.
-        phone: 1-268-555-3602
-        email: merrill.eldridge@yahoo.com
