@@ -32,6 +32,6 @@
         "vscode:prepublish": "npx js-yaml syntaxes/nestedtext.yaml > syntaxes/nestedtext.tmLanguage.json"
     },
     "devDependencies": {
-        "js-yaml": "^3.14.0"
+        "js-yaml": "^4.1.0"
     }
 }

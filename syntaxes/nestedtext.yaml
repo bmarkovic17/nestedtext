@@ -33,13 +33,13 @@ repository:
             name: string.unquoted.nestedtext
   dictionary-item:
     patterns:
-      - match: ^ *+(([^\"|^']+)|(\".+\")|('.+'))(:( |\n))([^\n]*+)
+      - match: "^ *+([^\\[|^{]+)(:( |\n))([^\n]*+)"
         captures:
           1:
             name: support.variable
-          5:
+          2:
             name: keyword.other.nestedtext
-          7:
+          4:
             name: string.unquoted.nestedtext
 scopeName: source.nestedtext
 ...
