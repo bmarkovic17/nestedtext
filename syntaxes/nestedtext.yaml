@@ -34,7 +34,7 @@ repository:
             name: string.unquoted.nestedtext
   dictionary-item:
     patterns:
-      - match: "^ *+([^\\[|^{]+)(:( |\n))([^\n]*+)"
+      - match: "^ *+([^\\[|{][^:]*+)(:( |\n))([^\n]*+)"
         captures:
           1:
             name: support.variable
@@ -44,7 +44,7 @@ repository:
             name: string.unquoted.nestedtext
   dictionary-item-multiline:
     patterns:
-      - match: ^ *+(:( |\n))([^\n]*+)
+      - match: ^(:( |\n))([^\n]*+)
         captures:
           1:
             name: keyword.other.nestedtext
