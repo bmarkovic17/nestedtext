@@ -5,6 +5,7 @@ patterns:
   - include: "#line-comment"
   - include: "#string-item"
   - include: "#list-item"
+  - include: "#dictionary-item-inline"
   - include: "#dictionary-item-multiline"
   - include: "#dictionary-item"
 repository:
@@ -50,5 +51,28 @@ repository:
             name: keyword.other.nestedtext
           3:
             name: support.variable
+  dictionary-item-inline:
+    begin: \s*+({)
+    end: (})\s*+
+    captures:
+      1:
+        name: keyword.other.nestedtext
+    patterns:
+      - include: "$self"
+      - include: "#dictionary-item-inline-inline-string"
+      - include: "#dictionary-item-inline-key-value-separator"
+      # TODO: include inline list once rule is defined
+  dictionary-item-inline-inline-string:
+    patterns:
+      - match: ((?:[^\n\[\]{},:])+?)
+        captures:
+          1:
+            name: support.variable
+  dictionary-item-inline-key-value-separator:
+    patterns:
+      - match: ((?::|,)+?)
+        captures:
+          1:
+            name: keyword.other.nestedtext
 scopeName: source.nestedtext
 ...
