@@ -52,7 +52,7 @@ repository:
             name: support.variable
   list-item-inline-separator:
     patterns:
-      - match: ((?:,)+?)
+      - match: ((?:,)+?)(?!\s*+])
         captures:
           1:
             name: keyword.other.nestedtext
@@ -92,7 +92,7 @@ repository:
             name: support.variable
   dictionary-item-inline-key-value-separator:
     patterns:
-      - match: ((?::|,)+?)
+      - match: ((?::|,)+?)(?!\s*+})
         captures:
           1:
             name: keyword.other.nestedtext
