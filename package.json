@@ -8,7 +8,7 @@
         "type": "git"
     },
     "bugs": "https://github.com/bmarkovic17/nestedtext/issues",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "engines": {
         "vscode": "^1.51.0"
     },
