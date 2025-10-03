@@ -58,7 +58,7 @@ repository:
             name: keyword.other.nestedtext
   dictionary-item:
     patterns:
-      - match: "^\s*+([^\\[|{][^:]*+)(:( |\n))([^\n]*+)"
+      - match: "^\\s*+([^\\[|{][^:]*+)(:( |\n))([^\n]*+)"
         captures:
           1:
             name: support.variable
