@@ -8,7 +8,7 @@ Visual Studio Code extension with support for [NestedText data format](https://n
 
 ## Features
   - [x] Syntax highlighting
-  - [ ] Indentation rules
+  - [x] Indentation rules
 
 ## Questions, issues, feature requests and contributions
 

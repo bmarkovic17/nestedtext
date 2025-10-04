@@ -20,5 +20,32 @@
         ["(", ")"],
         ["\"", "\""],
         ["'", "'"]
+    ],
+    "indentationRules": {
+        "increaseIndentPattern": "^\\s*(?:-|[^\\[{#\\s](?:[^:]|:[^ ])*:)$",
+        "decreaseIndentPattern": "(?!)"
+    },
+    "onEnterRules": [
+        {
+            "beforeText": "^\\s*>(?- |$)",
+            "action": {
+                "indent": "none",
+                "appendText": "- "
+            }
+        },
+        {
+            "beforeText": "^\\s*>(?: |$)",
+            "action": {
+                "indent": "none",
+                "appendText": "> "
+            }
+        },
+        {
+            "beforeText": "^\\s*:(?: |$)",
+            "action": {
+                "indent": "none",
+                "appendText": ": "
+            }
+        }
     ]
 }
