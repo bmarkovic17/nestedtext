@@ -1,37 +1,69 @@
 {
-    "name": "nestedtext",
-    "displayName": "NestedText",
-    "description": "NestedText data format extension",
-    "publisher": "bmarkovic17",
-    "repository": {
-        "url": "https://github.com/bmarkovic17/nestedtext",
-        "type": "git"
-    },
-    "bugs": "https://github.com/bmarkovic17/nestedtext/issues",
-    "version": "2.0.0",
-    "engines": {
-        "vscode": "^1.51.0"
-    },
-    "categories": [
-        "Programming Languages"
-    ],
-    "contributes": {
-        "languages": [{
-            "id": "nestedtext",
-            "aliases": ["NestedText"],
-            "extensions": [".nt"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "nestedtext",
-            "scopeName": "source.nestedtext",
-            "path": "./syntaxes/nestedtext.tmLanguage.json"
-        }]
-    },
-    "scripts": {
-        "vscode:prepublish": "npx js-yaml syntaxes/nestedtext.yaml > syntaxes/nestedtext.tmLanguage.json"
-    },
-    "devDependencies": {
-        "js-yaml": "^4.1.0"
-    }
+	"name": "nestedtext",
+	"displayName": "NestedText",
+	"description": "NestedText data format extension",
+	"publisher": "bmarkovic17",
+	"repository": {
+		"url": "https://github.com/bmarkovic17/nestedtext",
+		"type": "git"
+	},
+	"type": "module",
+	"bugs": "https://github.com/bmarkovic17/nestedtext/issues",
+	"version": "2.0.0",
+	"engines": {
+		"node": "^24",
+		"vscode": "^1.51.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "nestedtext",
+				"aliases": [
+					"NestedText"
+				],
+				"extensions": [
+					".nt"
+				],
+				"configuration": "./language-configuration.json"
+			},
+			{
+				"id": "nestedtext-lax",
+				"aliases": [
+					"NestedText (lax)"
+				],
+				"extensions": [
+					".nt"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "nestedtext",
+				"scopeName": "source.nestedtext.strict",
+				"path": "./syntaxes/nestedtext.tmLanguage.json"
+			},
+			{
+				"language": "nestedtext-lax",
+				"scopeName": "source.nestedtext.lax",
+				"path": "./syntaxes/nestedtext-lax.tmLanguage.json"
+			}
+		]
+	},
+	"scripts": {
+		"build": "tsc && node ./out/build-grammars.js",
+		"package": "vsce package",
+		"vscode:prepublish": "npm run build"
+	},
+	"devDependencies": {
+		"@types/js-yaml": "^4",
+		"@types/node": "^24",
+		"@types/vscode": "1.51.0",
+		"@vscode/vsce": "^3",
+		"js-yaml": "^4",
+		"typescript": "^5"
+	}
 }

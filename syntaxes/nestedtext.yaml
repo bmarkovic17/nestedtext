@@ -12,7 +12,7 @@ patterns:
 repository:
   line-comment:
     patterns:
-      - match: ^ *+(#)([^\n]*+) # possesive specific regex is better than .*
+      - match: ^<INDENT>*+(#)([^\n]*+) # possesive specific regex is better than .*
         captures:
           1:
             name: keyword.other.nestedtext
@@ -20,19 +20,19 @@ repository:
             name: comment.line.number-sign.nestedtext
   string-item:
     patterns:
-      - match: ^ *+(>( |\n))([^\n]*+)
+      - match: ^<INDENT>*+(>[ \n])([^\n]*+)
         captures:
           1:
             name: keyword.other.nestedtext
-          3:
+          2:
             name: string.unquoted.nestedtext
   list-item:
     patterns:
-      - match: ^ *+(-( |\n))([^\n]*+)
+      - match: ^<INDENT>*+(-[ \n])([^\n]*+)
         captures:
           1:
             name: keyword.other.nestedtext
-          3:
+          2:
             name: string.unquoted.nestedtext
   list-item-inline:
     begin: \s*+(\[)
@@ -58,21 +58,21 @@ repository:
             name: keyword.other.nestedtext
   dictionary-item:
     patterns:
-      - match: "^ *+([^\\[|{][^:]*+)(:( |\n))([^\n]*+)"
+      - match: ^<INDENT>*+([^\[{][^:]*+)(:[ \n])([^\n]*+)
         captures:
           1:
             name: support.variable
           2:
             name: keyword.other.nestedtext
-          4:
+          3:
             name: string.unquoted.nestedtext
   dictionary-item-multiline:
     patterns:
-      - match: ^(:( |\n))([^\n]*+)
+      - match: ^(:[ \n])([^\n]*+)
         captures:
           1:
             name: keyword.other.nestedtext
-          3:
+          2:
             name: support.variable
   dictionary-item-inline:
     begin: \s*+({)
@@ -96,5 +96,5 @@ repository:
         captures:
           1:
             name: keyword.other.nestedtext
-scopeName: source.nestedtext
+scopeName: <SCOPE_NAME>
 ...

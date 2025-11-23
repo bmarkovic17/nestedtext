@@ -1,4 +1,7 @@
 .vscode/**
-.vscode-test/**
+out/**
+src/**
+test/**
 .gitignore
-vsc-extension-quickstart.md
+tsconfig.json
+syntaxes/nestedtext.yaml
