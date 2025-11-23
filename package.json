@@ -9,7 +9,7 @@
 	},
 	"type": "module",
 	"bugs": "https://github.com/bmarkovic17/nestedtext/issues",
-	"version": "2.0.0",
+	"version": "2.1.0",
 	"engines": {
 		"node": "^24",
 		"vscode": "^1.51.0"
@@ -20,9 +20,9 @@
 	"contributes": {
 		"languages": [
 			{
-				"id": "nestedtext",
+				"id": "nestedtext-lax",
 				"aliases": [
-					"NestedText"
+					"NestedText (lax)"
 				],
 				"extensions": [
 					".nt"
@@ -30,9 +30,9 @@
 				"configuration": "./language-configuration.json"
 			},
 			{
-				"id": "nestedtext-lax",
+				"id": "nestedtext",
 				"aliases": [
-					"NestedText (lax)"
+					"NestedText"
 				],
 				"extensions": [
 					".nt"
@@ -42,14 +42,14 @@
 		],
 		"grammars": [
 			{
-				"language": "nestedtext",
-				"scopeName": "source.nestedtext.strict",
-				"path": "./syntaxes/nestedtext.tmLanguage.json"
-			},
-			{
 				"language": "nestedtext-lax",
 				"scopeName": "source.nestedtext.lax",
 				"path": "./syntaxes/nestedtext-lax.tmLanguage.json"
+			},
+			{
+				"language": "nestedtext",
+				"scopeName": "source.nestedtext.strict",
+				"path": "./syntaxes/nestedtext.tmLanguage.json"
 			}
 		]
 	},
