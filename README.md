@@ -69,3 +69,9 @@ MIT
 ## Maintainer
 - Repository: `https://github.com/bmarkovic17/nestedtext`
 - Maintainer: Boris Marković
+
+## Changelog
+
+### 2.2.1
+- Fixed issue with not being able to use colons in non-multiline dictionary keys
+- Fixed issue where multiline dictionary keys could not be indented
